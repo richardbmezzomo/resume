@@ -1,5 +1,4 @@
-import { useGitHub } from "@/context/GitHubContext"
-
+import { useGitHub } from "@/hooks/useGitHub"
 
 
 export const Profile = () => {

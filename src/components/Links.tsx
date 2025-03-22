@@ -1,4 +1,4 @@
-import { useGitHub } from "@/context/GitHubContext"
+import { useGitHub } from "@/hooks/useGitHub"
 import { Briefcase, Github, Globe, Linkedin, Mail, MapPin } from "lucide-react"
 
 export const Links = () => {
