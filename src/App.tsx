@@ -1,5 +1,14 @@
+import { Sidebar } from "./components/Sidebar";
+
 export const App = () => {
   return (
-    <h1>Hello World!</h1>
+    <div className="bg-ink min-h-screen">
+      <div className="grid grid-cols-1 md:grid-cols-[348px_1fr] min-h-screen">
+        <aside className="border border-red-700">
+          <Sidebar />
+        </aside>
+        <main className="border border-amber-200">MAIN</main>
+      </div>
+    </div>
   );
 };
