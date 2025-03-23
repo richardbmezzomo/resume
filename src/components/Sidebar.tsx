@@ -1,3 +1,4 @@
+import { Experiences } from "./Experiences"
 import { Links } from "./Links"
 import { Profile } from "./Profile"
 import { Tecnologies } from "./Tecnologies"
@@ -8,6 +9,7 @@ export const Sidebar = () => {
             <Profile/>
             <Links />
             <Tecnologies />
+            <Experiences />
         </div>
     )
 }
