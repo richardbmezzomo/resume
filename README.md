@@ -1,6 +1,6 @@
 # 💼 Richard Mezzomo - Portfólio e BRAG documents
 
-Este é meu portfólio pessoal, construído com [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/) e [Tailwind CSS v4](https://tailwindcss.com/) utilizando o [shadcn/ui](https://ui.shadcn.dev/). Aqui você encontra:
+Este é meu curriculo online, construído com [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/) e [Tailwind CSS v4](https://tailwindcss.com/) utilizando o [shadcn/ui](https://ui.shadcn.dev/). Aqui você encontra:
 
 - 🧠 Minhas experiências profissionais
 - 🛠️ As tecnologias com as quais trabalho
