@@ -1,5 +1,17 @@
+import { Main } from "./components/Main";
+import { Sidebar } from "./components/Sidebar";
+
 export const App = () => {
   return (
-    <h1>Hello World!</h1>
+    <div className="bg-ink min-h-screen">
+      <div className="grid grid-cols-1 md:grid-cols-[448px_1fr] min-h-screen">
+        <aside className="">
+          <Sidebar />
+        </aside>
+        <main className="">
+          <Main />
+        </main>
+      </div>
+    </div>
   );
 };
