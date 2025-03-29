@@ -1,14 +1,16 @@
 import { formatDistanceToNow } from "date-fns"
 import { ptBR } from "date-fns/locale/pt-BR"
+import { Link } from "react-router-dom"
 
 interface IssueCardProps {
+  id: number,
   title: string
   body: string
   created_at: string
   avatar_url: string
 }
 
-export const IssueCard = ({ title, body, created_at, avatar_url }: IssueCardProps) => {
+export const IssueCard = ({ id, title, body, created_at, avatar_url }: IssueCardProps) => {
 
   const fullText = body
 
@@ -32,7 +34,9 @@ export const IssueCard = ({ title, body, created_at, avatar_url }: IssueCardProp
           <p className="">
             {snippet || "Sem descrição disponível..."}
           </p>
-          <a href="">Ver mais </a>
+          <Link to={`/issue/${id}`} className="text-sm underline hover:text-heather/80">
+            Ver mais
+          </Link>
         </div>
       </div>
     </div>
