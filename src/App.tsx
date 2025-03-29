@@ -1,3 +1,4 @@
+import { Main } from "./components/Main";
 import { Sidebar } from "./components/Sidebar";
 
 export const App = () => {
@@ -7,7 +8,9 @@ export const App = () => {
         <aside className="">
           <Sidebar />
         </aside>
-        <main className="">MAIN</main>
+        <main className="">
+          <Main />
+        </main>
       </div>
     </div>
   );
