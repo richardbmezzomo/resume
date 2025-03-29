@@ -1,6 +1,6 @@
-import { CardTitle } from "./CardTitle"
-import { PinnedRepos } from "./PinnedRepos"
-import { PostInfo } from "./PostInfo"
+import { CardTitle } from "../components/CardTitle"
+import { PinnedRepos } from "../components/PinnedRepos"
+import { PostInfo } from "../components/PostInfo"
 
 export const Main = () => {
     return (

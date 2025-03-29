@@ -1,17 +1,17 @@
-import { Main } from "./components/Main";
-import { Sidebar } from "./components/Sidebar";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Layout } from "./components/Layout"
+import { Main } from "./pages/Main"
+import { BragDocument} from "./pages/BragDocument"
 
 export const App = () => {
   return (
-    <div className="bg-ink min-h-screen">
-      <div className="grid grid-cols-1 md:grid-cols-[448px_1fr] min-h-screen">
-        <aside className="">
-          <Sidebar />
-        </aside>
-        <main className="">
-          <Main />
-        </main>
-      </div>
-    </div>
-  );
-};
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Main />} />
+          <Route path="issue/:id" element={<BragDocument />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
+}

@@ -17,6 +17,7 @@ export const IssueList = () => {
       {issues.map((issue) => (
         <IssueCard
           key={issue.id}
+          id={issue.id}
           title={issue.title}
           body={issue.body}
           created_at={issue.created_at}
