@@ -2,21 +2,36 @@ import { useEffect, useState } from "react"
 import { getPinnedRepos } from "@/services/github"
 import { Repo } from "@/types/github"
 import { Folder, GitFork, Star } from "lucide-react"
-
+import { LoadingSkeleton } from "./LoadingSkeleton"
 
 export function PinnedRepos() {
   const [repos, setRepos] = useState<Repo[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    getPinnedRepos().then(setRepos)
+    getPinnedRepos().then((data) => {
+      setRepos(data)
+      setLoading(false)
+    })
   }, [])
+
+  if (loading) {
+    return (
+      <div className="grid md:grid-cols-2 gap-7 w-full text-heather">
+        {Array.from({ length: 2 }).map((_, i) => (
+          <LoadingSkeleton key={i} />
+        ))}
+      </div>
+    )
+  }
+
 
   return (
     <div className="grid md:grid-cols-2 gap-7 w-full text-heather">
       {repos.map((repo) => (
         <a
           key={repo.name}
-          href={repo.url} 
+          href={repo.url}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-graphite p-8 rounded-2xl hover:scale-[1.02] transition-transform duration-200"

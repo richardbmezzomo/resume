@@ -1,5 +1,6 @@
 import { CardTitle } from "./CardTitle"
 import { PinnedRepos } from "./PinnedRepos"
+import { PostInfo } from "./PostInfo"
 
 export const Main = () => {
     return (
@@ -10,6 +11,12 @@ export const Main = () => {
                 url="https://github.com/richardbmezzomo?tab=repositories"
             />
             <PinnedRepos />
+            <CardTitle 
+                hasMany={false}
+                title="BRAG Documents"
+                url=""
+            />
+            <PostInfo />
         </div>
     )
 }
